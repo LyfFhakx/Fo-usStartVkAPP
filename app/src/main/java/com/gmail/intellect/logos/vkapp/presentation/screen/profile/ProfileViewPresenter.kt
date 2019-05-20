@@ -2,13 +2,13 @@ package com.gmail.intellect.logos.vkapp.presentation.screen.profile
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
-import com.gmail.intellect.logos.vkapp.App
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.CatMessage
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.PostMessage
 import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
+import ru.terrakok.cicerone.Router
 
 @InjectViewState
-class ProfileViewPresenter : MvpPresenter<ProfileView>() {
+class ProfileViewPresenter(private val router: Router) : MvpPresenter<ProfileView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
@@ -32,7 +32,7 @@ class ProfileViewPresenter : MvpPresenter<ProfileView>() {
     }
 
     fun logout() {
-        App.INCTANCE.router.replaceScreen(Screen.LogInScreen())
+        router.replaceScreen(Screen.LogInScreen())
     }
 
 }

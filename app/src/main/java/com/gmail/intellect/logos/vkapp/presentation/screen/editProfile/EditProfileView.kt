@@ -1,4 +1,6 @@
 package com.gmail.intellect.logos.vkapp.presentation.screen.editProfile
 
-interface EditProfileView {
+import com.arellomobile.mvp.MvpView
+
+interface EditProfileView : MvpView {
 }
