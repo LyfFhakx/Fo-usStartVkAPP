@@ -13,4 +13,5 @@ class SplashFragment : BaseFragment(R.layout.frament_splash), SplashView {
 
     @ProvidePresenter
     fun providePresenter(): SplashPresenter = get()
+    //TODO add some cool animation
 }

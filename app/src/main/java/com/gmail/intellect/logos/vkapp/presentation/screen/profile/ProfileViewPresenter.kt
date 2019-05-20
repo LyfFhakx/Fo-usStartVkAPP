@@ -30,8 +30,9 @@ class ProfileViewPresenter(private val router: Router) : MvpPresenter<ProfileVie
             }
         })
     }
-
+    //TODO add uploading image, audio, video. new "verstka"
     fun logout() {
+
         router.replaceScreen(Screen.LogInScreen())
     }
 
