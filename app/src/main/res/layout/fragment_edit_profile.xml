@@ -4,7 +4,8 @@
                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
                                                      android:layout_width="match_parent"
                                                      android:layout_height="match_parent"
-                                                     tools:context=".view.fragment.editProfile.EditProfile">
+                                                     tools:context=".presentation.screen.editProfile.EditProfile"
+                                                     android:id="@+id/coordinatorLayout">
 
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -21,35 +22,61 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="150dp"
+    >
 
         <TextView
-                android:id="@+id/profileViewFirstName"
-                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/profileViewFullName"
+                android:layout_width="match_parent"
                 android:textSize="24sp"
                 android:layout_height="wrap_content"/>
 
+        <EditText
+                android:padding="10dp"
+                android:id="@+id/profileViewFullNameEdit"
+                android:layout_width="match_parent"
+                android:textSize="24sp"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+        />
         <TextView
+                android:padding="10dp"
                 android:id="@+id/profileViewBirthDate"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp"
+                android:background="@color/white"/>
 
         <TextView
+                android:padding="10dp"
                 android:id="@+id/profileViewCity"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp"
+                android:background="@color/white"
+        />
         <TextView
+                android:padding="10dp"
                 android:id="@+id/profileViewLanguages"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"/>
+                android:textSize="24sp"
+        />
 
-        <Button android:layout_width="match_parent"
+
+        <Button
+                android:padding="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/accept"
-                android:textSize="24sp"/>
+                android:textSize="24sp"
+                android:id="@+id/button"
+        />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

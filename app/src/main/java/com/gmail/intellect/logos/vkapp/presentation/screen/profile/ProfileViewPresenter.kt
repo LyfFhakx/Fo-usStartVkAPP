@@ -1,12 +1,11 @@
-package com.gmail.intellect.logos.vkapp.presenter
+package com.gmail.intellect.logos.vkapp.presentation.screen.profile
 
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.gmail.intellect.logos.vkapp.App
-import com.gmail.intellect.logos.vkapp.view.fragment.profile.message.CatMessage
-import com.gmail.intellect.logos.vkapp.view.fragment.profile.message.PostMessage
-import com.gmail.intellect.logos.vkapp.navigation.screens.Screen
-import com.gmail.intellect.logos.vkapp.view.ProfileView
+import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.CatMessage
+import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.PostMessage
+import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
 
 @InjectViewState
 class ProfileViewPresenter : MvpPresenter<ProfileView>() {
@@ -34,7 +33,6 @@ class ProfileViewPresenter : MvpPresenter<ProfileView>() {
 
     fun logout() {
         App.INCTANCE.router.replaceScreen(Screen.LogInScreen())
-       // TODO("Navigate to login")
     }
 
 }

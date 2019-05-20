@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.navigation.screens
+package com.gmail.intellect.logos.vkapp.presentation.common
 
 import androidx.fragment.app.Fragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen

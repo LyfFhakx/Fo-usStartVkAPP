@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.view.fragment.profile
+package com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.gmail.intellect.logos.vkapp.R
-import com.gmail.intellect.logos.vkapp.model.loadImage
-import com.gmail.intellect.logos.vkapp.view.fragment.profile.message.BaseMessage
-import com.gmail.intellect.logos.vkapp.view.fragment.profile.message.CatMessage
-import com.gmail.intellect.logos.vkapp.view.fragment.profile.message.PostMessage
+import com.gmail.intellect.logos.vkapp.presentation.common.loadImage
+import com.gmail.intellect.logos.vkapp.presentation.common.BaseMessage
 import kotlinx.android.synthetic.main.item_post_message.view.*
 import java.lang.IllegalArgumentException
 

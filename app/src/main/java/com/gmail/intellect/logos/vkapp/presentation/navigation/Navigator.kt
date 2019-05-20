@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.navigation
+package com.gmail.intellect.logos.vkapp.presentation.navigation
 
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager

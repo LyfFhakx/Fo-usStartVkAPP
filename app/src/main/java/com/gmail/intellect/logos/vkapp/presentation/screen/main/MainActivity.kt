@@ -1,9 +1,11 @@
-package com.gmail.intellect.logos.vkapp
+package com.gmail.intellect.logos.vkapp.presentation.screen.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.gmail.intellect.logos.vkapp.navigation.Navigator
-import com.gmail.intellect.logos.vkapp.navigation.screens.Screen
+import com.gmail.intellect.logos.vkapp.App
+import com.gmail.intellect.logos.vkapp.R
+import com.gmail.intellect.logos.vkapp.presentation.navigation.Navigator
+import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
 
 class MainActivity : AppCompatActivity() {

@@ -1,11 +1,11 @@
-package com.gmail.intellect.logos.vkapp.view.fragment
+package com.gmail.intellect.logos.vkapp.presentation.common
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
-import com.gmail.intellect.logos.vkapp.moxy.MvpAppCompatFragment
+import com.gmail.intellect.logos.vkapp.presentation.moxy.MvpAppCompatFragment
 
 abstract class BaseFragment(@LayoutRes private val layoutId: Int) : MvpAppCompatFragment() {
 

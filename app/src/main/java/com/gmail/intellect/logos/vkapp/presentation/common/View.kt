@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.model
+package com.gmail.intellect.logos.vkapp.presentation.common
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide
