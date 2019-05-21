@@ -23,14 +23,13 @@ class LogInFragment : BaseFragment(R.layout.fragment_log_in), LogInView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        logInButtonClick()
     }
 
     private fun logInButtonClick() {
         logIn.setOnClickListener {
             when (it.id) {
                 R.id.logIn -> presenter.logIn()
-
             }
         }
     }

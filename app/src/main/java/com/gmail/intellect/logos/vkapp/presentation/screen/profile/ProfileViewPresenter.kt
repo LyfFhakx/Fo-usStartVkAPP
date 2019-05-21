@@ -1,6 +1,7 @@
 package com.gmail.intellect.logos.vkapp.presentation.screen.profile
 
 import com.arellomobile.mvp.InjectViewState
+import com.gmail.intellect.logos.vkapp.data.ProfileData
 import com.gmail.intellect.logos.vkapp.presentation.common.BasePresenter
 import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.CatMessage
@@ -13,7 +14,7 @@ class ProfileViewPresenter(private val router: Router) : BasePresenter<ProfileVi
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        viewState.showProfile("Lya Ka Koe","08.01.1910","City","Delicious","http://mila.kcbux.ru/babo/image/ico-babo/bab-001.png")
+        viewState.showProfile(profileDate = ProfileData("https://ichef.bbci.co.uk/images/ic/720x405/p0517py6.jpg","Lya Ka Koe","08.01.1910","City","Delicious"))
 
         viewState.showFeed((1..100).map {
             if (it % 5 == 0) {

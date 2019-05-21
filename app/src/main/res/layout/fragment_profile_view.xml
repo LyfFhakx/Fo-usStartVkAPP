@@ -30,6 +30,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+        <ImageView
+                android:id="@+id/profileViewAvatar"
+                android:minHeight="200dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars"
+                android:layout_height="wrap_content"
+                android:layout_width="400dp"
+                android:contentDescription="@string/avatar"/>
+
         <TextView
                 android:id="@+id/profileViewFullName"
                 android:layout_width="wrap_content"
@@ -52,18 +61,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"/>
-        <ImageView
-                android:id="@+id/profileViewAvatar"
-                android:minHeight="200dp"
-                android:scaleType="centerCrop"
-                tools:src="@tools:sample/avatars"
-                android:layout_height="wrap_content"
-                android:layout_width="400dp"/>
+
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/profileViewFeed"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="427dp"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

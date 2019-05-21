@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.gmail.intellect.logos.vkapp.R
+import com.gmail.intellect.logos.vkapp.data.ProfileData
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseFragment
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseMessage
 import com.gmail.intellect.logos.vkapp.presentation.common.loadImage
@@ -40,13 +41,13 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
         profileViewFeed.adapter = feedAdapter
     }
 
-    override fun showProfile(fullName: String, birthDate: String, city: String, languages: String,image:String)
+    override fun showProfile(profileDate: ProfileData)
     {
-        profileViewFullName.text = fullName
-        profileViewBirthDate.text = birthDate
-        profileViewCity.text = city
-        profileViewLanguages.text = languages
-        profileViewAvatar.loadImage(image)
+        profileViewFullName.text = profileDate.fullName
+        profileViewBirthDate.text = profileDate.birthDate
+        profileViewCity.text = profileDate.city
+        profileViewLanguages.text = profileDate.languages
+        profileViewAvatar.loadImage(profileDate.image)
     }
 
     override fun showFeed(items: List<BaseMessage>) {
