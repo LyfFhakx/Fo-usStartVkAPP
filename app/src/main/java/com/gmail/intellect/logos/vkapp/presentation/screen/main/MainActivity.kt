@@ -1,7 +1,6 @@
 package com.gmail.intellect.logos.vkapp.presentation.screen.main
 
 import android.os.Bundle
-import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.gmail.intellect.logos.vkapp.R
@@ -12,7 +11,7 @@ import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
 import ru.terrakok.cicerone.android.support.SupportAppNavigator
 
-class MainActivity : MvpAppCompatActivity(),MainView {
+class MainActivity : com.gmail.intellect.logos.vkapp.presentation.moxy.MvpAppCompatActivity(),MainView {
 
     @InjectPresenter
     lateinit var presenter: MainPresenter

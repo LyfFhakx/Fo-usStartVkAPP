@@ -2,9 +2,9 @@ package com.gmail.intellect.logos.vkapp.presentation.screen.profile
 
 import com.arellomobile.mvp.InjectViewState
 import com.gmail.intellect.logos.vkapp.presentation.common.BasePresenter
+import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.CatMessage
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.PostMessage
-import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
 import ru.terrakok.cicerone.Router
 
 @InjectViewState
@@ -33,6 +33,9 @@ class ProfileViewPresenter(private val router: Router) : BasePresenter<ProfileVi
     //TODO add uploading image, audio, video. new "verstka"
     fun logout() {
         router.replaceScreen(Screen.LogInScreen())
+    }
+    fun editProfile() {
+        router.replaceScreen(Screen.EditProfileScreen())
     }
 
 }
