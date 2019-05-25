@@ -6,26 +6,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.gmail.intellect.logos.vkapp.R
-import com.gmail.intellect.logos.vkapp.data.ProfileData
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseFragment
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseMessage
 import com.gmail.intellect.logos.vkapp.presentation.common.loadImage
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.FeedAdapter
 import kotlinx.android.synthetic.main.fragment_profile_view.*
-import org.koin.android.ext.android.get
-import org.koin.android.ext.android.inject
-import ru.terrakok.cicerone.Router
+import javax.inject.Inject
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
     ProfileView {
-
+    @Inject
     @InjectPresenter
     lateinit var presenter: ProfileViewPresenter
 
     @ProvidePresenter
-    fun providePresenter():ProfileViewPresenter = get()
-
-    private val router by inject<Router>()
+    fun providePresenter(): ProfileViewPresenter = presenter
 
     private val feedAdapter = FeedAdapter()
 
@@ -41,8 +36,7 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
         profileViewFeed.adapter = feedAdapter
     }
 
-    override fun showProfile(profileDate: ProfileData)
-    {
+    override fun showProfile(profileDate: ProfileData) {
         profileViewFullName.text = profileDate.fullName
         profileViewBirthDate.text = profileDate.birthDate
         profileViewCity.text = profileDate.city

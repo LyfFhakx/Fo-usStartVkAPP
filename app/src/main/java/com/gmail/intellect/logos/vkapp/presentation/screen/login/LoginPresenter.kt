@@ -1,28 +1,29 @@
 package com.gmail.intellect.logos.vkapp.presentation.screen.login
 
+import android.util.Log
 import com.arellomobile.mvp.InjectViewState
+import com.gmail.intellect.logos.vkapp.domain.repository.SessionRepository
 import com.gmail.intellect.logos.vkapp.presentation.common.BasePresenter
-import com.gmail.intellect.logos.vkapp.presentation.navigation.Screen
-import ru.terrakok.cicerone.Router
+import io.reactivex.android.schedulers.AndroidSchedulers
+import javax.inject.Inject
 
 @InjectViewState
-class LoginPresenter(private val router: Router) : BasePresenter<LogInView>() {
+class LoginPresenter @Inject constructor(
+    private val sessionRepository: SessionRepository
+) : BasePresenter<LoginView>() {
 
-//TODO add loginCheck
-
-//    override fun onFirstViewAttach() {
-//        super.onFirstViewAttach()
-//        viewState.checkLogIn(){
-//
-//        }
-//    }
-
-    fun logIn() {
-        router.replaceScreen(Screen.ProfileViewScreen())
+    fun login(name: String, password: String) {
+        sessionRepository
+            .login(name, password)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe(
+                {
+                    Log.d("data", it.toString())
+                },
+                {
+                    Log.d("error", it.message)
+                }
+            )
+            .untilDestroy()
     }
-    fun changePassword(){
-        //TODO add change password fragment
-    }
-
-//TODO add navigation, account-password stab, verification.
 }

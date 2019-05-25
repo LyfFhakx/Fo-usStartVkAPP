@@ -1,18 +1,12 @@
 package com.gmail.intellect.logos.vkapp
 
-import android.app.Application
-import com.gmail.intellect.logos.vkapp.presentation.presentationModule
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
+import dagger.android.AndroidInjector
+import dagger.android.support.DaggerApplication
 
-class App : Application() {
+class App : DaggerApplication() {
 
-    override fun onCreate() {
-        super.onCreate()
-
-        startKoin{
-            androidContext(this@App)
-            modules(presentationModule)
-        }
-    }
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
+        DaggerAppComponent
+            .factory()
+            .create(this)
 }

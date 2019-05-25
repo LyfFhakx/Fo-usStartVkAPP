@@ -25,49 +25,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        <ImageView
-                android:id="@+id/profileViewAvatar"
-                android:minHeight="200dp"
-                android:scaleType="centerCrop"
-                tools:src="@tools:sample/avatars"
-                android:layout_height="wrap_content"
-                android:layout_width="400dp"
-                android:contentDescription="@string/avatar"/>
-
-        <TextView
-                android:id="@+id/profileViewFullName"
-                android:layout_width="wrap_content"
-                android:textSize="24sp"
-                android:layout_height="wrap_content"/>
-
-        <TextView
-                android:id="@+id/profileViewBirthDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"/>
-
-        <TextView
-                android:id="@+id/profileViewCity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"/>
-        <TextView
-                android:id="@+id/profileViewLanguages"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"/>
-
-
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/profileViewFeed"
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="427dp"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+            <ImageView
+                    android:id="@+id/profileViewAvatar"
+                    android:minHeight="200dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_height="wrap_content"
+                    android:layout_width="400dp"
+                    android:contentDescription="@string/avatar"/>
+            <TextView
+                    android:id="@+id/profileViewFullName"
+                    android:layout_width="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/profileViewBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"/>
+
+            <TextView
+                    android:id="@+id/profileViewCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"/>
+            <TextView
+                    android:id="@+id/profileViewLanguages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileViewFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="427dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
