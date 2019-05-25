@@ -23,17 +23,20 @@ class LoginFragment : BaseFragment(R.layout.fragment_log_in), LoginView {
         super.onViewCreated(view, savedInstanceState)
         logInButtonClick()
     }
-    private fun getLoginData(){
-        var name = logInAccount.text.toString()
-        var password = logInPassword.text.toString()
 
+    private fun getLogin():String {
+        return logInAccount.text.toString()
+    }
+    private fun getPassword():String {
+        return logInPassword.text.toString()
     }
 
     private fun logInButtonClick() {
-        getLoginData()
+        val name = getLogin()
+        val password = getPassword()
         logIn.setOnClickListener {
             when (it.id) {
-                R.id.logIn -> presenter.login()
+                R.id.logIn -> presenter.login(name,password)
             }
         }
     }

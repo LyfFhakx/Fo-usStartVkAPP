@@ -1,5 +1,6 @@
 package com.gmail.intellect.logos.vkapp
 
+import com.gmail.intellect.logos.vkapp.dagger.AppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

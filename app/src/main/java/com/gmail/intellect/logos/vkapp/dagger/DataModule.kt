@@ -1,8 +1,10 @@
 package com.gmail.intellect.logos.vkapp.dagger
 
 import com.gmail.intellect.logos.vkapp.data.repository.PostRepositoryImpl
+import com.gmail.intellect.logos.vkapp.data.repository.ProfileRepositoryImpl
 import com.gmail.intellect.logos.vkapp.data.repository.SessionRepositoryImpl
 import com.gmail.intellect.logos.vkapp.domain.repository.PostRepository
+import com.gmail.intellect.logos.vkapp.domain.repository.ProfileRepository
 import com.gmail.intellect.logos.vkapp.domain.repository.SessionRepository
 import dagger.Binds
 import dagger.Module
@@ -21,4 +23,8 @@ interface DataModule {
     @Reusable
     @Binds
     fun bindPostRepository(instance: PostRepositoryImpl): PostRepository
+
+    @Reusable
+    @Binds
+    fun bindProfileRepository(instance: ProfileRepositoryImpl): ProfileRepository
 }
