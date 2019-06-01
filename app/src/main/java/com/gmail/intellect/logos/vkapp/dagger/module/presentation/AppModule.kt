@@ -1,5 +1,6 @@
-package com.gmail.intellect.logos.vkapp.dagger
+package com.gmail.intellect.logos.vkapp.dagger.module.presentation
 
+import com.gmail.intellect.logos.vkapp.dagger.ActivityScope
 import com.gmail.intellect.logos.vkapp.presentation.screen.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

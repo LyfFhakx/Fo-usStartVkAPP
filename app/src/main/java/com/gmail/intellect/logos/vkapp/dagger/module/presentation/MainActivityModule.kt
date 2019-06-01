@@ -1,5 +1,6 @@
-package com.gmail.intellect.logos.vkapp.dagger
+package com.gmail.intellect.logos.vkapp.dagger.module.presentation
 
+import com.gmail.intellect.logos.vkapp.dagger.FragmentScope
 import com.gmail.intellect.logos.vkapp.presentation.screen.login.LoginFragment
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.ProfileViewFragment
 import com.gmail.intellect.logos.vkapp.presentation.screen.splash.SplashFragment

@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.dagger
+package com.gmail.intellect.logos.vkapp.dagger.module.data
 
 import com.gmail.intellect.logos.vkapp.data.repository.PostRepositoryImpl
 import com.gmail.intellect.logos.vkapp.data.repository.ProfileRepositoryImpl

@@ -12,6 +12,11 @@ class LoginPresenter @Inject constructor(
     private val sessionRepository: SessionRepository
 ) : BasePresenter<LoginView>() {
 
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        login("root", "root")
+    }
+
     fun login(name: String, password: String) {
         sessionRepository
             .login(name, password)

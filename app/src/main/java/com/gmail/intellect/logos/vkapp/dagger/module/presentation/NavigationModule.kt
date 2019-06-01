@@ -1,4 +1,4 @@
-package com.gmail.intellect.logos.vkapp.dagger
+package com.gmail.intellect.logos.vkapp.dagger.module.presentation
 
 import dagger.Module
 import dagger.Provides
