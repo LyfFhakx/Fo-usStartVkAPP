@@ -6,16 +6,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.gmail.intellect.logos.vkapp.R
-import com.gmail.intellect.logos.vkapp.domain.entity.User
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseFragment
 import com.gmail.intellect.logos.vkapp.presentation.common.BaseMessage
-import com.gmail.intellect.logos.vkapp.presentation.common.loadImage
 import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.FeedAdapter
 import kotlinx.android.synthetic.main.fragment_profile_view.*
 import javax.inject.Inject
 
 class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
     ProfileView {
+
+    companion object {
+
+        fun createInstance() = ProfileViewFragment()
+    }
     @Inject
     @InjectPresenter
     lateinit var presenter: ProfileViewPresenter
@@ -27,8 +30,11 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         initToolbar()
         initFeed()
+
+        profileRefreshLayout.setOnRefreshListener(presenter::refreshPosts)
     }
 
     private fun initFeed() {
@@ -37,13 +43,28 @@ class ProfileViewFragment : BaseFragment(R.layout.fragment_profile_view),
         profileViewFeed.adapter = feedAdapter
     }
 
-    override fun showProfile(profileDate: User) {
-        profileViewFullName.text = profileDate.firstName
+    override fun showProfile(firstName:String) {
+        profileViewFullName.text = firstName
         //profileDate.lastName
-        profileViewBirthDate.text = profileDate.birthDate
-        profileViewCity.text = profileDate.city
-        profileViewLanguages.text = profileDate.languages
-        profileViewAvatar.loadImage(profileDate.image)
+//        profileViewBirthDate.text = profileDate.birthDate
+//        profileViewCity.text = profileDate.city
+//        profileViewLanguages.text = profileDate.languages
+//        profileViewAvatar.loadImage(profileDate.avatar)
+    }
+    override fun showEmptyFeed() {
+    }
+
+    override fun showProgress() {
+        profileProgressBar.visibility = View.VISIBLE
+    }
+
+    override fun hideProgress() {
+        profileRefreshLayout.isRefreshing = false
+        profileProgressBar.visibility = View.GONE
+    }
+
+    override fun showErrorFeed() {
+
     }
 
     override fun showFeed(items: List<BaseMessage>) {

@@ -20,54 +20,67 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ProgressBar
+            android:id="@+id/profileProgressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/profileRefreshLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-            <ImageView
-                    android:id="@+id/profileViewAvatar"
-                    android:minHeight="200dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_height="wrap_content"
-                    android:layout_width="400dp"
-                    android:contentDescription="@string/avatar"/>
-            <TextView
-                    android:id="@+id/profileViewFullName"
-                    android:layout_width="wrap_content"
-                    android:textSize="24sp"
-                    android:layout_height="wrap_content"/>
-
-            <TextView
-                    android:id="@+id/profileViewBirthDate"
-                    android:inputType="date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"/>
-
-            <TextView
-                    android:id="@+id/profileViewCity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"/>
-            <TextView
-                    android:id="@+id/profileViewLanguages"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"/>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/profileViewFeed"
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="427dp"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                <ImageView
+                        android:id="@+id/profileViewAvatar"
+                        android:minHeight="200dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@tools:sample/avatars"
+                        android:layout_height="wrap_content"
+                        android:layout_width="400dp"
+                        android:contentDescription="@string/avatar"/>
+                <TextView
+                        android:id="@+id/profileViewFullName"
+                        android:layout_width="wrap_content"
+                        android:textSize="24sp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/profileViewBirthDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"/>
+
+                <TextView
+                        android:id="@+id/profileViewCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"/>
+                <TextView
+                        android:id="@+id/profileViewLanguages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/profileViewFeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="427dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

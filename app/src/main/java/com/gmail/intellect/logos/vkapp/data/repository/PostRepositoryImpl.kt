@@ -6,9 +6,6 @@ import com.gmail.intellect.logos.vkapp.data.network.api.Api
 import com.gmail.intellect.logos.vkapp.data.network.reponse.PostResponse
 import com.gmail.intellect.logos.vkapp.domain.entity.Post
 import com.gmail.intellect.logos.vkapp.domain.repository.PostRepository
-import com.gmail.intellect.logos.vkapp.presentation.common.BaseMessage
-import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.CatMessage
-import com.gmail.intellect.logos.vkapp.presentation.screen.profile.feed.PostMessage
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
@@ -24,7 +21,7 @@ class PostRepositoryImpl @Inject constructor(private val api: Api,
 
 
 
-    override fun getPost(id: Long): BaseMessage {
+    override fun getPost(id: Long): Post {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

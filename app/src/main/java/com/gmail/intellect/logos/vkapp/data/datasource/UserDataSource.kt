@@ -21,8 +21,13 @@ class UserDataSourceImpl @Inject constructor(private val userDao: UserDao) : Use
                 password,
                 user.firstName,
                 user.lastName,
-                user.avatar
-            )
+                user.status,
+                user.birthDate,
+                user.avatar,
+                user.country,
+                user.city,
+                user.languages
+                )
         )
     }
 
